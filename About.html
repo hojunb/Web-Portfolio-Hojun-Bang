@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Hojun Bang Portfolio">
+    <title>Hojun Bang | Front End Developer - Freelancer </title>
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+</head>
+
+
+<style>
+    body {
+        background: rgba(0, 0, 0, 0.85);
+        color: whitesmoke;
+        font-family: monospace;
+        font-size: 15px;
+        text-align: left;
+    }
+
+    #header {
+        /* margin-top: 80px; 페이지의 맨 위에서 메뉴가 header를 가리지 않도록 임의 공백을 만듬 */
+    }
+
+    #navbar {
+        position: fixed;
+        width: 100%;
+        top: 0px;
+        /* 상단 위치를 0으로 함으로써 위에 붙음 */
+        left: 0px;
+        /* 왼쪽에 붙음 */
+        background-color: rgba(50, 50, 50, 0.9);
+    }
+
+    nav ul {
+        margin: 0px;
+        padding: 15px;
+        /* ?패딩을 navbar에 주었을때랑 navli에 주었을때랑 nav ul에 주었을 때 차이점? */
+    }
+
+    nav li {
+        display: inline-block;
+        margin-right: 30px;
+        /* ?마진을 주었는데 글자간 띄어쓰기가 됨? */
+    }
+
+    nav li:hover {
+        background-color: black;
+        /* a.hover에서 글자는 이미 오렌지로 설정했음*/
+    }
+
+    nav li:nth-child(1) {
+        color: whitesmoke;
+        background-color: orange;
+    }
+
+    /* a:link - normal, unvisited link */
+    /* a:visited - link the user has visited */
+    a:link,
+    a:visited {
+        color: whitesmoke;
+        text-decoration: none;
+    }
+
+    /* a link when the user mouses over it */
+    a:hover {
+        color: orange;
+    }
+
+    #footer {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        padding: 15px, 0px;
+        /* 상하, 좌우 */
+        font-size: 12px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+</style>
+
+<body>
+    <nav id="navbar">
+        <ul>
+            <li>HJ</li>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Skills.html">Skills</a></li>
+            <li><a href="Work.html">Work</a></li>
+            <li><a href="">Resume</a></li>
+        </ul>
+    </nav>
+
+    
+    <div>
+        <p>About me</p>
+    </div>
+    
+    
+    
+    <footer id="footer">
+        &copy; 2021 Hojun Bang
+    </footer>
+</body>
+
+</html>
