@@ -17,9 +17,18 @@
         font-size: 15px;
         text-align: left;
     }
+    
+    /* a:link - normal, unvisited link */
+    /* a:visited - link the user has visited */
+    a:link,
+    a:visited {
+        color: whitesmoke;
+        text-decoration: none;
+    }
 
-    #header {
-        /* margin-top: 80px; 페이지의 맨 위에서 메뉴가 header를 가리지 않도록 임의 공백을 만듬 */
+    /* a link when the user mouses over it */
+    a:hover {
+        color: orange;
     }
 
     #navbar {
@@ -44,31 +53,30 @@
         /* ?마진을 주었는데 글자간 띄어쓰기가 됨? */
     }
 
-    nav li:hover {
-        background-color: black;
-        /* a.hover에서 글자는 이미 오렌지로 설정했음*/
+    header {
+        margin-top: 250px;
+        /* 페이지의 맨 위에서 메뉴가 header를 가리지 않도록 임의 공백을 만듬 */
+    }
+    
+    main {
+        margin-bottom: 50px;
+    }
+    
+    .aboutheader {
+        font-size: 25px;
+        text-align: center;
     }
 
-    nav li:nth-child(1) {
-        color: whitesmoke;
-        background-color: orange;
-    }
-
-    /* a:link - normal, unvisited link */
-    /* a:visited - link the user has visited */
-    a:link,
-    a:visited {
-        color: whitesmoke;
-        text-decoration: none;
-    }
-
-    /* a link when the user mouses over it */
-    a:hover {
-        color: orange;
+    .aboutmain {
+        width: 28rem;
+        margin: 0 auto;
+        font-size: 1.2rem;
+        text-align: center;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
     }
 
     #footer {
-        position: fixed;
         width: 100%;
         left: 0;
         bottom: 0;
@@ -87,19 +95,30 @@
             <li>HJ</li>
             <li><a href="Home.html">Home</a></li>
             <li><a href="About.html">About</a></li>
-            <li><a href="Skills.html">Skills</a></li>
             <li><a href="Work.html">Work</a></li>
-            <li><a href="">Resume</a></li>
+            <li><a href="Skills.html">Skills</a></li>
         </ul>
     </nav>
 
-    
-    <div>
-        <p>About me</p>
-    </div>
-    
-    
-    
+    <header>
+        <div class="aboutheader">
+            <h1>About</h1>
+            <hr width="35%">
+        </div>
+    </header>
+
+    <main>
+        <div class="aboutmain">
+            <article><p>I live and work near San Jose, California.</p>
+            <p>Self-motivated and results-driven solutions thinker with a baccalaureate degree in Applied Physics and a strong hands-on experience in implementing data mining and statistical machine learning solutions to various projects.</p>
+            <p>Highly detailed and exceptional analytical and problem- solving skills with critical thinking to address complex research and project management issues.</p>
+            <p>Provided data-driven business insights and right decision-making process.</p>
+            <p>Time management for handling multiple tasks in the fast-paced environment.</p>
+            <p>Excellent people management and interpersonal communication skills (multilingual in English and Korean) that inspire confidence, while fostering teamwork synergies with colleagues in achieving shared objectives.</p>
+            <p>Proactive energy, self-motivated communicator, and tech-savvy learner.</p></article>
+        </div>
+    </main>
+
     <footer id="footer">
         &copy; 2021 Hojun Bang
     </footer>

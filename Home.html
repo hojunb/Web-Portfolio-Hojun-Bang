@@ -18,6 +18,14 @@
         text-align: left;
     }
 
+    /* a:link - normal, unvisited link */
+    /* a:visited - link the user has visited */
+    a:link,
+    a:visited {
+        color: whitesmoke;
+        text-decoration: none;
+    }
+
     #header {
         /* margin-top: 80px; 페이지의 맨 위에서 메뉴가 header를 가리지 않도록 임의 공백을 만듬 */
     }
@@ -41,32 +49,13 @@
     nav li {
         display: inline-block;
         margin-right: 30px;
-        /* ?마진을 주었는데 글자간 띄어쓰기가 됨? */
-    }
-
-    nav li:hover {
-        background-color: black;
-        /* a.hover에서 글자는 이미 오렌지로 설정했음*/
-    }
-
-    nav li:nth-child(1) {
-        color: whitesmoke;
-        background-color: orange;
-    }
-
-    /* a:link - normal, unvisited link */
-    /* a:visited - link the user has visited */
-    a:link,
-    a:visited {
-        color: whitesmoke;
-        text-decoration: none;
+        /* 네비게이션 아이템간의 띄어쓰기 */
     }
 
     /* a link when the user mouses over it */
-    a:hover {
+    nav a:hover {
         color: orange;
     }
-
 
     h1 {
         margin: 250px 0px 0px 60px;
@@ -100,23 +89,44 @@
         margin: 5px 0px 40px 60px;
         color: chartreuse;
         font-size: 10px;
-        letter-spacing: 4px;
+        letter-spacing: 3px;
         /* 자간 (글자간격) */
     }
 
-    #contact-box {
-        border: 1.5px solid;
+    #contactpage {
+        border: 2px solid;
         border-color: orchid;
         margin: 0px 0px 0px 60px;
         padding: 10px;
-        color: orchid;
+        width: 135px;
         letter-spacing: 3px;
+        font-weight: bold;
+    }
+
+    #contactpage a {
+        color: orchid;
+    }
+
+    /* 현재 a:link, a:visited 에서 글색을 white로 설정해놓아서 이렇게 해주지 않고 #contactpage 아이디에서 글색 설정을 할 경우 안먹힘*/
+    /* 현재 body- white, a:link, a:visited- white, #contact a- orchid */
+
+    #contactpage:hover {
+        animation-name: blink;
+        animation-duration: 500ms;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes blink {
+        100% {
+            background-color: white;
+            border-color: white;
+        }
     }
 
     #rightsidebar {
         float: right;
         width: 180px;
-        margin: auto;
+        margin: -150px auto;
         /* margin: -150px 50px 0px 0px; */
     }
 
@@ -126,6 +136,14 @@
         letter-spacing: 3px;
         display: inline-block;
         line-height: 2.5em;
+    }
+
+    #rightsidebar a:hover {
+        color: aqua;
+    }
+
+    #rightsidebar a {
+        text-align: left;
     }
 
     .arrow {
@@ -159,7 +177,7 @@
         <div class="container">
             <hgroup class="home-title">
                 <h1>Hi! I'm Hojun</h1>
-                <h2>{front-end is fun
+                <h2>Front-end is fun
                     <br>HAHAHAHAHAHAHAHAHAHAHAHAHAHAH SAN JOSE
                 </h2>
             </hgroup>
@@ -171,13 +189,12 @@
             <li>HJ</li>
             <li><a href="Home.html">Home</a></li>
             <li><a href="About.html">About</a></li>
-            <li><a href="Skills.html">Skills</a></li>
             <li><a href="Work.html">Work</a></li>
-            <li><a href="">Resume</a></li>
+            <li><a href="Skills.html">Skills</a></li>
         </ul>
     </nav>
 
-    <a href="" id="contact-box">Contact me !</a>
+    <p id="contactpage"><a href="">Contact me !</a></p>
 
     <aside id="rightsidebar">
         <ul>
@@ -187,9 +204,9 @@
             <li><a href="">1. aaaaaa</a></li>
             <li><a href="">2. bbbbbb</a></li>
             <li><a href="">3. cccccc</a></li>
-
         </ul>
     </aside>
+
     <footer id="footer">
         &copy; 2021 Hojun Bang
     </footer>
