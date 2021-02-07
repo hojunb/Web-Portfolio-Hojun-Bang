@@ -1,0 +1,161 @@
+    body {
+        background: rgba(0, 0, 0, 0.85);
+        color: whitesmoke;
+        font-family: monospace;
+        font-size: 15px;
+        text-align: left;
+    }
+
+    /* a:link - normal, unvisited link */
+    /* a:visited - link the user has visited */
+    a:link,
+    a:visited {
+        color: whitesmoke;
+        text-decoration: none;
+    }
+
+    #header {
+        /* margin-top: 80px; 페이지의 맨 위에서 메뉴가 header를 가리지 않도록 임의 공백을 만듬 */
+    }
+
+    #navbar {
+        position: fixed;
+        width: 100%;
+        top: 0px;
+        /* 상단 위치를 0으로 함으로써 위에 붙음 */
+        left: 0px;
+        /* 왼쪽에 붙음 */
+        background-color: rgba(50, 50, 50, 0.9);
+    }
+
+    nav ul {
+        margin: 0px;
+        padding: 15px;
+        /* ?패딩을 navbar에 주었을때랑 navli에 주었을때랑 nav ul에 주었을 때 차이점? */
+        text-align: center;
+    }
+
+    nav li {
+        display: inline-block;
+        margin-right: 70px;
+        /* 네비게이션 아이템간의 띄어쓰기 */
+    }
+
+    /* a link when the user mouses over it */
+    nav a:hover {
+        color: orange;
+    }
+
+    h1 {
+        margin: 250px 0px 0px 60px;
+        color: cornflowerblue;
+        font-size: 45px;
+
+        width: 14ch;
+        /* width는 글자수 (space 포함) 만큼 설정해 주어야 */
+        overflow: hidden;
+        white-space: nowrap;
+        border-right: .05em solid transparent;
+        animation: typing 4s steps(14), cursor 2s steps(14) infinite;
+        /* 글자 typing 총 4초, 13스텝에 나눠서, 커서 깜빡이는 속도, 13스텝에 나눠서*/
+    }
+
+    /* width가 0 인상태에서 시작 */
+    @keyframes typing {
+        from {
+            width: 0;
+        }
+    }
+
+    /* 글자가 써질때마다 커서가 깜빡이는 효과 */
+    @keyframes cursor {
+        0% {
+            border-color: transparent;
+        }
+    }
+
+    h2 {
+        margin: 5px 0px 40px 60px;
+        color: chartreuse;
+        font-size: 10px;
+        letter-spacing: 3px;
+        /* 자간 (글자간격) */
+    }
+
+    #contactpage {
+        border: 2px solid;
+        border-color: orchid;
+        margin: 0px 0px 0px 60px;
+        padding: 10px;
+        width: 135px;
+        letter-spacing: 3px;
+        font-weight: bold;
+    }
+
+    #contactpage a {
+        color: orchid;
+    }
+
+    /* 현재 a:link, a:visited 에서 글색을 white로 설정해놓아서 이렇게 해주지 않고 #contactpage 아이디에서 글색 설정을 할 경우 안먹힘*/
+    /* 현재 body- white, a:link, a:visited- white, #contact a- orchid */
+
+    #contactpage:hover {
+        animation-name: blink;
+        animation-duration: 500ms;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes blink {
+        100% {
+            background-color: white;
+            border-color: white;
+        }
+    }
+
+    #rightsidebar {
+        float: right;
+        width: 10%;
+        margin: 0px 60px 0px 0px;
+    }
+
+    /* 이렇게 하면 rightsidebar 아래에 있는 list만 선택적으로 변경 가능, aside li를 이용해도 li보다는 선택적이나 aside의 모든 li를 변경하는 것이기 때문에 유의해야 함. */
+    #rightsidebar li {
+        font-size: 18px;
+        letter-spacing: 3px;
+        display: inline-block;
+        line-height: 2em;
+    }
+
+    #rightsidebar a:hover {
+        color: aqua;
+    }
+
+    @media(max-width: 600px) {
+        #rightsidebar {
+            display: none;
+        }
+    }
+
+    .arrow {
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 2px;
+    }
+
+    .down {
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+    }
+
+    #footer {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        padding: 15px, 0px;
+        /* 상하, 좌우 */
+        font-size: 12px;
+        text-align: center;
+        font-weight: bold;
+    }
